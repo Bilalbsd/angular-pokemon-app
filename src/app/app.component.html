@@ -1,0 +1,17 @@
+<h1 class="text-center mt-1">Liste de Pokémons</h1>
+
+<div class="container d-flex justify-content-center align-items-center flex-wrap gap-1">
+    <div *ngFor="let pokemon of pokemonList" class="card-deck">
+        <div class="card mb-4">
+            <img [src]="pokemon.picture" class="card-img-top" alt="{{pokemon.name}}">
+            <div class="card-body">
+                <h5 class="card-title">{{pokemon.name}}</h5>
+                <p class="card-text">
+                    <span class="badge bg-primary">{{pokemon.hp}} HP</span>
+                    <span class="badge bg-success">{{pokemon.cp}} CP</span>
+                </p>
+                <p class="card-text">Types: {{pokemon.types}}</p>
+            </div>
+        </div>
+    </div>
+</div>
